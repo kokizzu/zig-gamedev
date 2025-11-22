@@ -21,6 +21,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
+          lfs: 'true'
           submodules: 'true'
       - name: Install Zig
         uses: mlugg/setup-zig@v2
