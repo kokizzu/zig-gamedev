@@ -7,7 +7,6 @@ The original repo spawned in July 2021 by [Michal Ziulek](https://github.com/mic
 - Download and install [Git LFS](https://git-lfs.com)
 - Download and install [anyzig](https://github.com/marler8997/anyzig) (recommended) or get a compatible Zig compiler by some other means.
 - Clone this repo `git clone git@github.com:zig-gamedev/zig-gamedev.git && cd zig-gamedev`
-- Initialise library submodules `git submodule update --init`
 
 Build and run a sample app:
 ```sh
