@@ -25,6 +25,10 @@ jobs:
           submodules: 'recursive'
           persist-credentials: true
           token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull LFS content
+        run: |
+          git lfs pull
+          git submodule foreach --recursive 'git lfs pull'
       - name: Install Zig
         uses: mlugg/setup-zig@v2
       - name: Check format
