@@ -19,10 +19,12 @@ jobs:
     runs-on: ${{matrix.os}}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           lfs: 'true'
-          submodules: 'true'
+          submodules: 'recursive'
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Install Zig
         uses: mlugg/setup-zig@v2
       - name: Check format
